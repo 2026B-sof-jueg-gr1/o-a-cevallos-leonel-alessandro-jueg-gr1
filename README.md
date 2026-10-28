@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # 🏎️ Carreras Arcade — Phaser 3
 
 Juego de carreras arcade 2D con vista superior (*top-down*), desarrollado con **Phaser 3**, **JavaScript**, **HTML5** y **CSS3**.
@@ -197,3 +198,6 @@ git push -u origin main
 ## 📄 Licencia
 
 Proyecto académico. Uso libre para fines educativos.
+=======
+
+>>>>>>> 2f535b413b54313ef4af56a68e7625c1117ca2e8
