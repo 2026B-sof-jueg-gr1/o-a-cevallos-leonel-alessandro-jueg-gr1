@@ -1,0 +1,39 @@
+/* ============================================
+   ESTILOS GENERALES - Carreras Arcade
+   ============================================ */
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cuerpo de la página: fondo oscuro, centrado */
+body {
+    background-color: #1a1a2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden;
+}
+
+/* Contenedor del juego: centrado con sombra */
+#game-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 0 30px rgba(0, 200, 255, 0.3),
+                0 0 60px rgba(0, 100, 255, 0.15);
+}
+
+/* El canvas que Phaser crea internamente */
+#game-container canvas {
+    display: block;
+    border-radius: 8px;
+}
+

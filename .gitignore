@@ -1,0 +1,19 @@
+# Sistema operativo
+Thumbs.db
+.DS_Store
+
+# Editores
+.vscode/
+*.swp
+*.swo
+*~
+
+# Node (no se usa, pero por precaución)
+node_modules/
+package-lock.json
+npm-debug.log
+
+# Archivos temporales
+*.tmp
+*.log
+
