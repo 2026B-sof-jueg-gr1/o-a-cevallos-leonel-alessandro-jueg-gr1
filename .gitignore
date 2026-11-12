@@ -8,6 +8,9 @@ Thumbs.db
 *.swo
 *~
 
+# Metadatos del asistente (no forman parte del proyecto)
+.workbuddy-ai/
+
 # Node (no se usa, pero por precaución)
 node_modules/
 package-lock.json
