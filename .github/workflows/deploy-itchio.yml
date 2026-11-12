@@ -1,0 +1,25 @@
+name: Despliegue Automatico a Itch.io
+
+# Se ejecuta automaticamente cada vez que haces git push a la rama main
+on:
+  push:
+    branches:
+      - main
+  workflow_dispatch: # Te permite ejecutarlo tambien manualmente desde un boton en GitHub
+
+jobs:
+  deploy-to-itchio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1. Clonar el repositorio en el servidor de GitHub
+        uses: actions/checkout@v4
+
+      - name: 2. Empaquetar y publicar en Itch.io con Butler
+        uses: josephbmanley/butler-publish-itchio-action@master
+        env:
+          BUTLER_CREDENTIALS: ${{ secrets.BUTLER_API_KEY }}
+          CHANNEL: html5
+          ITCH_USER: LeoDov
+          ITCH_GAME: spa-francorchamps-telemetry-sim
+          PACKAGE_DIR: ./juego
+          VERSION: ${{ github.run_number }}
