@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GT8 — Simulador arcade pseudo-3D de Spa-Francorchamps. Telemetría de paddock, física aplicada y 7,004 km de asfalto belga.">
+    <meta name="author" content="GT8 · Leonel Alessandro Oña Cevallos">
+    <meta name="theme-color" content="#070809">
+    <title>GT8 · Spa-Francorchamps — Terminal de Telemetría</title>
+
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='5' fill='%23070809'/><rect x='6' y='7' width='20' height='4' fill='%23e10600'/><rect x='6' y='14' width='20' height='4' fill='%2300f0ff'/><rect x='6' y='21' width='20' height='4' fill='%23e9eff5'/></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a class="saltar" href="#contenido">Saltar al contenido</a>
+
+    <!-- ============ BARRA DE ESTADO ============ -->
+    <header class="barra-estado">
+        <div class="contenedor barra-estado__interior">
+            <a class="marca" href="./index.html">
+                <span class="marca__sigla">GT8</span>
+                <span class="marca__desc">Simulation Division</span>
+            </a>
+
+            <ul class="lecturas">
+                <li class="lectura lectura--estado">
+                    <span class="led" aria-hidden="true"></span>Status: Track Green
+                </li>
+                <li class="lectura">Circuit: Spa-Francorchamps 7.004 km</li>
+                <li class="lectura">Telemetry: Online</li>
+            </ul>
+        </div>
+    </header>
+
+    <main id="contenido">
+
+        <!-- ============ HERO ============ -->
+        <section class="hero">
+            <div class="contenedor">
+                <p class="eyebrow"><span class="eyebrow__num">PROYECTO 01</span> Simulador arcade pseudo-3D · Phaser 3</p>
+
+                <h1 class="titulo">
+                    <span class="titulo__linea">Spa<span class="titulo__sep">//</span></span>
+                    <span class="titulo__linea">Francorchamps</span>
+                </h1>
+
+                <p class="entradilla">
+                    Un simulador de telemetría de paddock construido enteramente con matemáticas
+                    vectoriales. Sin imágenes, sin motores de física externos: solo código, geometría
+                    proyectada y el trazado real de Spa-Francorchamps.
+                </p>
+
+                <blockquote class="logline">
+                    <p>
+                        «Domina los 7 kilómetros más implacables de Bélgica desde el muro de ingenieros:
+                        un simulador arcade pseudo-3D donde cada milisegundo en Eau Rouge depende de tu
+                        lectura de velocidad, el punto exacto de frenada y el control de la fuerza centrífuga.»
+                    </p>
+                </blockquote>
+
+                <div class="acciones">
+                    <a class="cta" href="./juego/index.html">
+                        <span class="cta__texto">Iniciar simulación</span>
+                        <span class="cta__flecha" aria-hidden="true">→</span>
+                    </a>
+                    <p class="acciones__nota">Sin descargas · 60 FPS · Teclado</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ TIRA DE TELEMETRÍA ============ -->
+        <section class="tira" aria-label="Telemetría simulada del panel de boxes">
+            <div class="contenedor tira__rejilla">
+                <div class="tira__celda">
+                    <span class="tira__label">Vuelta actual</span>
+                    <span class="tira__valor">01:24.350</span>
+                </div>
+                <div class="tira__celda">
+                    <span class="tira__label">Mejor vuelta</span>
+                    <span class="tira__valor tira__valor--cian">01:19.716</span>
+                </div>
+                <div class="tira__celda">
+                    <span class="tira__label">Velocidad</span>
+                    <span class="tira__valor">287 <em>km/h</em></span>
+                </div>
+                <div class="tira__celda">
+                    <span class="tira__label">Sector</span>
+                    <span class="tira__valor">S2 · Raidillon</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MISIÓN 01 ============ -->
+        <section class="seccion" id="mision-1">
+            <div class="contenedor">
+                <header class="seccion__cab">
+                    <span class="seccion__num">01</span>
+                    <div class="seccion__texto">
+                        <h2>Ingeniería del propósito</h2>
+                        <p>Resonancia ludonarrativa: cada mecánica del código enseña una ley de la física.</p>
+                    </div>
+                </header>
+
+                <div class="lore">
+                    <div class="lore__texto">
+                        <h3>El piloto-ingeniero</h3>
+                        <p>
+                            No hay equipo de boxes ni ingeniero de datos al otro lado del pinganillo.
+                            Solo tú, el muro de telemetría y 7 004 metros de asfalto belga que suben,
+                            bajan y se retuercen. Cada vuelta es un experimento reproducible y cada
+                            décima que ganas viene de una decisión física, nunca de la suerte.
+                        </p>
+                        <p>
+                            El circuito está construido segmento a segmento —6 000 en total— con
+                            pendientes reales: la compresión de Eau Rouge, la cima ciega del Raidillon,
+                            el descenso hacia Bruxelles. La cámara sigue la rasante, así que el coche
+                            no «flota»: se apoya en el terreno que dibuja la matemática.
+                        </p>
+                    </div>
+
+                    <dl class="datos">
+                        <div class="dato"><dt>Segmentos de pista</dt><dd>6 000</dd></div>
+                        <div class="dato"><dt>Longitud</dt><dd>1 200 000 u</dd></div>
+                        <div class="dato"><dt>Vuelta de referencia</dt><dd>100 s</dd></div>
+                        <div class="dato"><dt>Assets externos</dt><dd>0</dd></div>
+                    </dl>
+                </div>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <span class="tarjeta__idx">01</span>
+                        <h3 class="tarjeta__titulo">Distancia de frenada y transferencia de momento</h3>
+                        <p class="tarjeta__cuerpo">
+                            Frenar con <strong>S</strong> antes del vértice de La Source o del Bus Stop
+                            transfiere carga al eje delantero y estabiliza la entrada. Frenar tarde
+                            satura el neumático en dos ejes a la vez —longitudinal y lateral— y el coche
+                            se va de morro. El simulador castiga el instinto y premia la anticipación.
+                        </p>
+                        <p class="tarjeta__pie">La Source · Bus Stop</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <span class="tarjeta__idx">02</span>
+                        <h3 class="tarjeta__titulo">Trazada óptima y fuerza centrífuga</h3>
+                        <p class="tarjeta__cuerpo">
+                            El empuje lateral crece con el cuadrado de la velocidad: doblar la velocidad
+                            en Pouhon o en el Raidillon cuadruplica la fuerza que te escupe fuera de la
+                            trazada. Corregir con <strong>A</strong> y <strong>D</strong> no es un reflejo,
+                            es un cálculo de vectores que se hace con las manos.
+                        </p>
+                        <p class="tarjeta__pie">Pouhon · Raidillon</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <span class="tarjeta__idx">03</span>
+                        <h3 class="tarjeta__titulo">Coeficiente de fricción y pérdida de tracción</h3>
+                        <p class="tarjeta__cuerpo">
+                            Salir del asfalto hacia los pianos y el césped no te bloquea: te degrada.
+                            La velocidad se topa a una cuarta parte de su máximo y cada segundo fuera de
+                            pista se paga directamente en el cronómetro. Es la lección más barata y más
+                            honesta del simulador.
+                        </p>
+                        <p class="tarjeta__pie">Pianos · Césped · Delta time</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ CABINA ============ -->
+        <section class="seccion" id="cabina">
+            <div class="contenedor">
+                <header class="seccion__cab">
+                    <span class="seccion__num">CAB</span>
+                    <div class="seccion__texto">
+                        <h2>Especificaciones y controles de cabina</h2>
+                        <p>Cuatro teclas. Tres lecturas. Ninguna excusa.</p>
+                    </div>
+                </header>
+
+                <div class="cabina">
+                    <div class="teclado">
+                        <div class="teclado__teclas" role="img" aria-label="Distribución de teclas WASD">
+                            <span class="tecla tecla--w">W</span>
+                            <span class="tecla tecla--a">A</span>
+                            <span class="tecla tecla--s">S</span>
+                            <span class="tecla tecla--d">D</span>
+                        </div>
+                        <p class="teclado__nota">Distribución estándar · sin mando, sin configuración previa</p>
+                    </div>
+
+                    <div class="controles">
+                        <div class="control">
+                            <span class="control__tecla">W</span>
+                            <div>
+                                <h3>Acelerador progresivo</h3>
+                                <p>Sube la velocidad a razón de 2 800 u/s² hasta un techo de 12 000 u/s. Al soltar, la fricción te devuelve a cero.</p>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span class="control__tecla">S</span>
+                            <div>
+                                <h3>Freno de competición</h3>
+                                <p>Frenada de 11 000 u/s². Detiene el coche por completo, sin marcha atrás.</p>
+                            </div>
+                        </div>
+                        <div class="control">
+                            <span class="control__tecla">A / D</span>
+                            <div>
+                                <h3>Dirección vectorial</h3>
+                                <p>Solo responde con el coche en movimiento, y su autoridad crece con la velocidad. Parado no gira.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="hud" aria-label="Lecturas del HUD del simulador">
+                    <div class="hud__panel">
+                        <span class="hud__label">Tiempo</span>
+                        <span class="hud__valor">00:00.000</span>
+                    </div>
+                    <div class="hud__panel">
+                        <span class="hud__label">Mejor</span>
+                        <span class="hud__valor hud__valor--tenue">--:--.---</span>
+                    </div>
+                    <div class="hud__panel hud__panel--vel">
+                        <span class="hud__label">Velocidad</span>
+                        <span class="hud__valor">300 <em>km/h</em></span>
+                        <span class="hud__barra" aria-hidden="true"><span class="hud__relleno"></span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ MISIÓN 02 ============ -->
+        <section class="seccion" id="mision-2">
+            <div class="contenedor">
+                <header class="seccion__cab">
+                    <span class="seccion__num">02</span>
+                    <div class="seccion__texto">
+                        <h2>Estructura de cumplimiento</h2>
+                        <p>Clasificación de audiencia, auditoría de licencias y tratamiento de datos.</p>
+                    </div>
+                </header>
+
+                <div class="cumplimiento">
+                    <div class="sello">
+                        <div class="sello__marco" role="img" aria-label="Sello de clasificación E para todo ingeniero">
+                            <span class="sello__letra">E</span>
+                            <span class="sello__texto">Todo ingeniero</span>
+                        </div>
+                        <p class="sello__nota">Clasificación E · Everyone</p>
+                    </div>
+
+                    <div class="sello__copy">
+                        <h3>Clasificación de audiencia creativa</h3>
+                        <p>
+                            «Apto para cualquier humano con pulso y reflejos. Contiene alto riesgo de
+                            subviraje en Raidillon, compresión vertical extrema y desgaste severo de
+                            neumáticos virtuales. Cero violencia, 100 % adrenalina cinemática.»
+                        </p>
+                        <ul class="chips">
+                            <li class="chip">ESRB E</li>
+                            <li class="chip">PEGI 3</li>
+                            <li class="chip">Sin violencia</li>
+                            <li class="chip">Sin compras</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="muro">
+                    <h3>Muro de honor · auditoría de licencias</h3>
+                    <ul class="muro__lista">
+                        <li class="muro__fila">
+                            <span class="muro__nombre">Phaser 3.60.0</span>
+                            <span class="muro__detalle">Motor del videojuego, cargado por CDN</span>
+                            <span class="chip chip--mit">MIT · Photon Storm</span>
+                        </li>
+                        <li class="muro__fila">
+                            <span class="muro__nombre">Gráficos procedurales</span>
+                            <span class="muro__detalle">Pista, coche y HUD dibujados con Phaser.GameObjects.Graphics</span>
+                            <span class="chip chip--cc0">Dominio propio · CC0</span>
+                        </li>
+                        <li class="muro__fila">
+                            <span class="muro__nombre">Assets de terceros</span>
+                            <span class="muro__detalle">Ninguna imagen, tipografía ni sonido externo</span>
+                            <span class="chip">Cero</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <aside class="privacidad">
+                    <h3>Política de privacidad y datos locales</h3>
+                    <p>
+                        Toda la telemetría y los récords de vuelta se procesan exclusivamente en la
+                        memoria local de tu navegador, mientras la pestaña está abierta. No hay cookies,
+                        ni rastreadores, ni analítica, ni recolección de datos personales, ni servidores
+                        que reciban tu tiempo de vuelta. Cierras la pestaña y no queda rastro.
+                    </p>
+                </aside>
+            </div>
+        </section>
+    </main>
+
+    <!-- ============ PIE ============ -->
+    <footer class="pie">
+        <div class="contenedor pie__interior">
+            <p class="pie__texto">GT8 · Simulation Division — Proyecto académico, 2026</p>
+            <p class="pie__estado"><span class="led led--estatico" aria-hidden="true"></span>Sistema listo</p>
+        </div>
+    </footer>
+</body>
+</html>
