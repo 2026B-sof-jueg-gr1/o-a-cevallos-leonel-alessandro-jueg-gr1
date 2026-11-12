@@ -1,0 +1,123 @@
+/* ============================================================
+   SIMULADOR — SPA-FRANCORCHAMPS
+   Estilos del contenedor del juego y de la barra de retorno.
+   ============================================================ */
+
+/* ---------- Reset básico ---------- */
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------- Página ---------- */
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    /* Reserva la franja de la barra superior: el canvas nunca queda tapado */
+    padding: 56px 0 16px;
+    background-color: #05080b;
+    background-image: radial-gradient(circle at 50% 45%, #12202c 0%, #05080b 70%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #e8f1f8;
+    overflow: hidden;
+}
+
+/* ---------- Barra superior de retorno ---------- */
+
+.barra-superior {
+    position: fixed;
+    inset: 0 0 auto 0;
+    z-index: 10;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 0 14px;
+    background: rgba(5, 8, 11, 0.92);
+    border-bottom: 1px solid #1d2a36;
+}
+
+.volver {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 7px 12px;
+    border: 1px solid #24323f;
+    border-radius: 2px;
+    font-family: ui-monospace, Consolas, 'Courier New', monospace;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: #9fb3c4;
+    transition: color 0.15s ease, border-color 0.15s ease, background 0.15s ease;
+}
+
+.volver:hover,
+.volver:focus-visible {
+    color: #e8f1f8;
+    border-color: #00f0ff;
+    background: rgba(0, 240, 255, 0.07);
+    outline: none;
+}
+
+.barra-titulo {
+    font-family: ui-monospace, Consolas, 'Courier New', monospace;
+    font-size: 10px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: #55697a;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* ---------- Contenedor del juego ---------- */
+
+#game-container {
+    position: relative;
+    width: min(800px, 100vw);
+    height: min(600px, calc(100vh - 72px));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 6px;
+    box-shadow: 0 0 0 1px #1d2a36,
+                0 18px 48px rgba(0, 0, 0, 0.65);
+}
+
+/* Lienzo generado por Phaser */
+#game-container canvas {
+    display: block;
+    border-radius: 6px;
+}
+
+/* ---------- Móvil ---------- */
+
+@media (max-width: 560px) {
+    body {
+        padding: 52px 0 8px;
+    }
+
+    .barra-titulo {
+        display: none;
+    }
+
+    #game-container {
+        height: min(600px, calc(100vh - 60px));
+    }
+}

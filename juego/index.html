@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Simulador arcade pseudo-3D del circuito de Spa-Francorchamps desarrollado con Phaser 3.">
+    <meta name="author" content="Leonel Alessandro Oña Cevallos">
+    <title>Spa-Francorchamps · Simulador GT8</title>
+
+    <!-- Icono inline para evitar la petición 404 de favicon.ico -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230b0f14'/><rect x='9' y='12' width='14' height='8' rx='2' fill='%23e10600'/></svg>">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra discreta de retorno al escaparate -->
+    <header class="barra-superior">
+        <a class="volver" href="../index.html">
+            <span aria-hidden="true">←</span> Volver al Pit Wall (Inicio)
+        </a>
+        <span class="barra-titulo">Spa-Francorchamps · Simulador</span>
+    </header>
+
+    <!-- Contenedor donde Phaser inserta el lienzo del juego -->
+    <main id="game-container" aria-label="Área del videojuego"></main>
+
+    <!-- Phaser 3.60.0 desde CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/phaser@3.60.0/dist/phaser.min.js"></script>
+
+    <!-- Punto de entrada del videojuego -->
+    <script src="game.js"></script>
+</body>
+</html>
