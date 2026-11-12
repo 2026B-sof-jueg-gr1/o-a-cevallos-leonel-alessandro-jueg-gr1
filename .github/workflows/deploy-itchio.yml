@@ -1,11 +1,10 @@
 name: Despliegue Automatico a Itch.io
 
-# Se ejecuta automaticamente cada vez que haces git push a la rama main
 on:
   push:
     branches:
       - main
-  workflow_dispatch: # Te permite ejecutarlo tambien manualmente desde un boton en GitHub
+  workflow_dispatch:
 
 jobs:
   deploy-to-itchio:
@@ -21,5 +20,5 @@ jobs:
           CHANNEL: html5
           ITCH_USER: LeoDov
           ITCH_GAME: spa-francorchamps-telemetry-sim
-          PACKAGE_DIR: ./juego
+          PACKAGE: juego
           VERSION: ${{ github.run_number }}
